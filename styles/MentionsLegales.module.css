@@ -1,5 +1,36 @@
 .container {
-    padding: "2rem";
-    max-width: "800px";
-    margin: "0 auto";
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+
+.p {
+  margin-bottom: 1rem;
+}
+
+.a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
 }

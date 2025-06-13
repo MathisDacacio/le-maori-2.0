@@ -7,22 +7,26 @@ export default function MentionsLegales() {
   
         <h2>Éditeur du site</h2>
         <p>
-          La société..., nom commercial<br />
-          Forme sociale : ...<br />
-          Numéro RCS : ...<br />
-          Adresse du siège : ...<br />
-          Numéro TVA Intracommunautaire : ...<br />
-          Télephone : ...<br />
-          Email : ...
+          La société: Le Maori 2.0<br />
+          Forme sociale: SAS<br />
+          Numéro Siren: 949894620 <br />
+          Adresse du siège: 8 Rue Casimir Fournier, 59530 Le Quesnoy<br />
+          Numéro TVA Intracommunautaire: FR 24949894620<br />
+          Télephone: 0977052778<br />
+          Email: <a href="mailto: lemaori2.0@gmail.com">lemaori2.0@gmail.com</a> 
         </p>
   
         <h2>Responsable de la publication</h2>
-        <p>Monsieur ...</p>
-        <p>Joignable aux mêmes coordonnées que l'éditeur.</p>
+        <p>
+          Monsieur Anthony FONTAINE<br />
+          Joignable aux mêmes coordonnées que l'éditeur.
+        </p>
 
         <h2>Réalisateur du site</h2>
-        <p>Nom: ...</p>
-        <p>Email: ...</p>
+        <p>
+          Nom: Mathis DACACIO <br />
+          Email: <a href="mailto: mathis.dacacio@gmail.com">mathis.dacacio@gmail.com</a>
+        </p>
   
         <h2>Hébergement</h2>
         <p>
