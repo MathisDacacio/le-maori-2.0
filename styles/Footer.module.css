@@ -36,7 +36,10 @@
   color: #f8f8f8;
   font-size: 0.95rem;
   line-height: 1.6;
-  text-decoration: none;
+}
+
+.location a {
+    text-decoration: underline;
 }
 
 .location a:hover {

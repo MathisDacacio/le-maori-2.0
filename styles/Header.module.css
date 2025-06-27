@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.45); /* effet de contraste sur le bois */
+  background-color: rgba(0, 0, 0, 0.45);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -10,6 +10,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .nav {
@@ -19,25 +20,13 @@
 }
 
 .link {
-  color: #d9fa45; /* vert fluo/jaune */
+  color: #d9fa45;
   text-decoration: none;
   position: relative;
   padding-bottom: 3px;
   font-weight: bold;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-}
-
-
-@keyframes underlineTribal {
-  0% {
-    width: 0;
-    left: 50%;
-  }
-  100% {
-    width: 100%;
-    left: 0;
-  }
 }
 
 .link::after {
@@ -61,7 +50,18 @@
 
 .active {
   color: #ffffff;
-  border-bottom: 2px solid #ffcc00; /* jaune doré */
+  border-bottom: 2px solid #ffcc00;
+}
+
+@keyframes underlineTribal {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
 }
 
 @keyframes pulse {
@@ -71,7 +71,7 @@
   }
   50% {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 10px #32a852); /* vert tribal */
+    filter: drop-shadow(0 0 10px #32a852);
   }
   100% {
     transform: scale(1);
@@ -81,8 +81,8 @@
 
 .logo {
   height: 200px;
-  margin: 0, 0, 0, 0;
-  padding: 0, 0, 0, 0;
+  margin: 0;
+  padding: 0;
   animation: pulse 3s ease-in-out infinite;
 }
 
@@ -92,4 +92,20 @@
   object-fit: cover;
   display: block;
   margin-bottom: -0.25rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 1rem;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 100px;
+  }
+}
+
+.body {
+  overflow-x: hidden;
 }
