@@ -12,24 +12,23 @@ export const metadata: Metadata = {
   description: 'A Next.js application with internationalization support',
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
+// Le layout devient async, et on await les params
+export default async function RootLayout(props: {
   children: React.ReactNode;
-  params: { 
-    locale: string 
-  };
-}>) {
+  params: { locale: string };
+}) {
+  // await l'accès aux params (nouvelle exigence Next.js 15+)
+  const { locale } = await Promise.resolve(props.params);
+
   return (
-    <html lang="fr">
+    <html lang={locale}>
       <body className={`${inter.className} ${styles.body}`}>
         <div className={styles.wrapper}>
-        <Providers locale={params.locale}>
-          <Header locale={params.locale} />
-            <main className={styles.main}>{children}</main>
-          <Footer locale={params.locale}/>
-        </Providers>
+          <Providers locale={locale}>
+            <Header locale={locale} />
+            <main className={styles.main}>{props.children}</main>
+            <Footer locale={locale} />
+          </Providers>
         </div>
       </body>
     </html>

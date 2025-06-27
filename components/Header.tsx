@@ -9,7 +9,8 @@ export default async function Header({ locale }: { locale: string }) {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
+      <div className={styles.container}>
+        <nav className={styles.nav}>
         <Link href={`/${locale}`} className={styles.link}>
           {headerT("title.home")}
         </Link>
@@ -19,9 +20,11 @@ export default async function Header({ locale }: { locale: string }) {
         <Link href={`/${locale}/about`} className={styles.link}>
           {headerT("title.about")}
         </Link>
-        <img src="/logo.png" alt="Logo" className={styles.logo} />
+        </nav>
+        <img src="/image/decorative/logo.png" alt="Logo" className={styles.logo} />
         <LocaleSelect />
-      </nav>
+      </div>
+      
       <img
         src="/image/decorative/background/separation_3.png"
         alt="image décorative du header"
