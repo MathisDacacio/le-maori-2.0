@@ -12,13 +12,17 @@ export const metadata: Metadata = {
   description: 'A Next.js application with internationalization support',
 };
 
-// Le layout devient async, et on await les params
-export default async function RootLayout(props: {
+type LocaleParams = {
+  locale: string;
+};
+
+type RootLayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
-}) {
-  // await l'accès aux params (nouvelle exigence Next.js 15+)
-  const { locale } = await Promise.resolve(props.params);
+  params: Promise<LocaleParams>;
+};
+
+export default async function RootLayout({ children, params }: RootLayoutProps) {
+  const { locale } = await params;
 
   return (
     <html lang={locale}>
@@ -26,7 +30,7 @@ export default async function RootLayout(props: {
         <div className={styles.wrapper}>
           <Providers locale={locale}>
             <Header locale={locale} />
-            <main className={styles.main}>{props.children}</main>
+            <main className={styles.main}>{children}</main>
             <Footer locale={locale} />
           </Providers>
         </div>
