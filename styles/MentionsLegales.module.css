@@ -1,36 +1,70 @@
 .container {
+  position: relative;
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+/* Pseudoelements avec ornements SVG */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-size: contain;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+/* Gauche */
+.container::before {
+  left: -40px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ff6f00' viewBox='0 0 10 100'><path d='M5 0 Q0 10 5 20 Q10 30 5 40 Q0 50 5 60 Q10 70 5 80 Q0 90 5 100'/></svg>");
+}
+
+/* Droite */
+.container::after {
+  right: -40px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 10 100'><path d='M5 0 Q10 10 5 20 Q0 30 5 40 Q10 50 5 60 Q0 70 5 80 Q10 90 5 100'/></svg>");
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
-  color: #f8ea1f;
+  color: #32a852; /* Vert vif */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
 .subTitle {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  color: #d9fa45;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.75rem;
+  color: #ffcc00; /* Jaune plus chaud */
+  border-bottom: 2px solid #ff6f00; /* Orange tribal */
   padding-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.p {
+.text {
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-.a {
-  color: #0070f3;
+.link {
+  color: #5768ff;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.a:hover {
+.link:hover {
+  color: #ff6f00; /* Orange vif */
   text-decoration: underline;
 }
