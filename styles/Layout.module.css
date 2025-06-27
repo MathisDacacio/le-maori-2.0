@@ -1,4 +1,8 @@
 .body {
+    background-image: url('/image/decorative/background/background_bois.png');
+    background-size: 25% 34%;
+    background-repeat: repeat;
+    padding: 2rem;
     margin: 0;
     padding: 0;
   }

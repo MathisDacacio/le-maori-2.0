@@ -1,0 +1,53 @@
+  
+.nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+}
+  
+.nav a {
+    color: rgb(20, 3, 3);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+  
+.nav a:hover {
+    color: #d0ffd0;
+}
+  
+.active {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color: rgb(131, 102, 81);
+}
+
+.languageSwitcher {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.langButton {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.langButton:hover {
+  background: white;
+  color: black;
+}
+
+
+.imgHeader {
+    width: 100%;
+    height: 15rem;
+    background-size: cover;
+    background-position: center;
+}

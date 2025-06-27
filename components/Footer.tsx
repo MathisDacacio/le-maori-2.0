@@ -1,13 +1,13 @@
-'use client';
 import styles from '@styles/Footer.module.css';
+import { getScopedI18n } from '@locales/server';
+import ScrollToTopButton from '@components/ScrollToTop';
 
-export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+export default async function Footer({ locale }: { locale: string }) {
+  const footerT = await getScopedI18n("footer");
 
   return (
     <footer className={styles.footer}>
+      <img src="/image/decorative/background/separation_4.png" alt="image décorative du footer" className={styles.imgFooter} />
       <div className={styles.content}>
         <div className={styles.location}>
           <h4>Brasserie Le Maori 2.0</h4>
@@ -18,16 +18,14 @@ export default function Footer() {
 
         <div className={styles.right}>
           <p className={styles.catchphrase}>
-            🍕 Découvrez la brasserie la mieux noté du Quesnoy ! </p>
-          <a href="/mentions-legales" className={styles.legal}>Mentions légales</a>
+            {footerT("description.text")}</p>
+          <a href={`/${locale}/mentions-legales`} className={styles.legal}>Mentions légales</a>
         </div>
       </div>
 
       <div className={styles.bottom}>
         <p>© 2025 <strong>Le Maori 2.0</strong> — Réalisé par Dacacio Mathis</p>
-        <button onClick={scrollToTop} className={styles.scrollTop} aria-label="Retour en haut">
-          ↑
-        </button>
+        <ScrollToTopButton />
       </div>
     </footer>
   );

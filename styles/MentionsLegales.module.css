@@ -7,17 +7,17 @@
   color: #333;
 }
 
-.h1 {
+.title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #111;
+  color: #f8ea1f;
 }
 
-.h2 {
+.subTitle {
   font-size: 1.25rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #444;
+  color: #d9fa45;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.25rem;
 }
