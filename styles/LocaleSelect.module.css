@@ -1,0 +1,18 @@
+.localeSelect {
+  background: linear-gradient(to right, #ffcc00, #ff6f00);
+  color: #1f1f1f;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  appearance: none;
+}
+
+.localeSelect:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 12px #ff6f00;
+}

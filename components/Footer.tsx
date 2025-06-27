@@ -10,21 +10,21 @@ export default async function Footer({ locale }: { locale: string }) {
       <img src="/image/decorative/background/separation_4.png" alt="image décorative du footer" className={styles.imgFooter} />
       <div className={styles.content}>
         <div className={styles.location}>
-          <h4>Brasserie Le Maori 2.0</h4>
+          <h4>{footerT("title")}</h4>
           <p>8 Rue Casimir Fournier, 59530 Le Quesnoy</p>
-          <p>Tél : <a href="tel:+33977052778">09 77 05 27 78</a></p>
-          <p><a target='_blank' href="https://www.google.fr/maps/place/Le+Maori+2.0/@50.2475974,3.6374987,19.5z/data=!4m16!1m7!3m6!1s0x47c28b8c96814fef:0xf966314a2e2baded!2sLe+Maori+2.0!8m2!3d50.2475404!4d3.6380065!16s%2Fg%2F11v3fkl8qs!3m7!1s0x47c28b8c96814fef:0xf966314a2e2baded!8m2!3d50.2475404!4d3.6380065!9m1!1b1!16s%2Fg%2F11v3fkl8qs?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D">Voir les avis</a></p>
+          <p>{footerT("phone")}<a href="tel:+33977052778"> 09 77 05 27 78</a></p>
+          <p><a target='_blank' href="https://www.google.fr/maps/place/Le+Maori+2.0/@50.2475974,3.6374987,19.5z/data=!4m16!1m7!3m6!1s0x47c28b8c96814fef:0xf966314a2e2baded!2sLe+Maori+2.0!8m2!3d50.2475404!4d3.6380065!16s%2Fg%2F11v3fkl8qs!3m7!1s0x47c28b8c96814fef:0xf966314a2e2baded!8m2!3d50.2475404!4d3.6380065!9m1!1b1!16s%2Fg%2F11v3fkl8qs?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D">{footerT("reviews")}</a></p>
         </div>
 
         <div className={styles.right}>
           <p className={styles.catchphrase}>
             {footerT("description.text")}</p>
-          <a href={`/${locale}/mentions-legales`} className={styles.legal}>Mentions légales</a>
+          <a href={`/${locale}/mentions-legales`} className={styles.legal}>{footerT("legalNotice")}</a>
         </div>
       </div>
 
       <div className={styles.bottom}>
-        <p>© 2025 <strong>Le Maori 2.0</strong> — Réalisé par Dacacio Mathis</p>
+        <p>© 2025 <strong>Le Maori 2.0</strong> {footerT("description.copyright.developer")}</p>
         <ScrollToTopButton />
       </div>
     </footer>

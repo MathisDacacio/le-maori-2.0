@@ -1,6 +1,7 @@
 "use client";
 
 import { useCurrentLocale, useChangeLocale } from '@locales/client';
+import styles from '@styles/LocaleSelect.module.css';
 
 export const LocaleSelect = () => {
   const locale = useCurrentLocale();
@@ -8,12 +9,12 @@ export const LocaleSelect = () => {
 
   return (
     <select
+      className={styles.localeSelect}
       value={locale}
       onChange={(e) => changeLocale(e.target.value as "en" | "fr")}
-      style={{ marginLeft: '10px', padding: '5px' }}
     >
       <option value="en">English</option>
       <option value="fr">Français</option>
     </select>
   );
-}
+};

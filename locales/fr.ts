@@ -1,20 +1,27 @@
+import { title } from "process";
 
 // locales/fr.ts
 export default {
 
    // header
   header: {
-    title: {
-      home: "Accueil",
-      menu: "Menu",
-      about: "À propos",
-    },
+    home: "Accueil",
+    menu: "Menu",
+    about: "À propos",
   },
 
   // footer
   footer: {
+    title: "Brasserie Le Maori 2.0",
+    phone: "Tél:",
+    legalNotice: "Mentions légales",
+    reviews: "Voir les avis",
+
     description: {
-      text: "🍕 Découvrez la brasserie la mieux noté du Quesnoy !",
+      text: "🍺 Bienvenue à la brasserie Le Maori 2.0, la mieux notée du Quesnoy ! Savourez des bières artisanales exotiques, une ambiance maorie unique et une expérience conviviale au cœur du Quesnoy.",
+      copyright: {
+        developer: "- Réalisé par Dacacio Mathis",
+      },
     },
   },
 

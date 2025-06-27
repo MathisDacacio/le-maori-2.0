@@ -3,17 +3,23 @@ export default {
 
   // header
   header: {
-    title: {
-      home: "Home",
-      menu: "Menu",
-      about: "About",
-    },
+    home: "Home",
+    menu: "Menu",
+    about: "About",
   },
 
   // footer
   footer: {
+    title: "Brewery Le Maori 2.0",
+    phone: "Phone:",
+    legalNotice: "Legal Notice",
+    reviews: "See Reviews",
+
     description: {
-      text: "This is a sample footer text in Maori Land.",
+      text: "🍺 Welcome to Le Maori 2.0 — the top-rated craft brewery in Le Quesnoy! Enjoy exotic homemade beers, a unique Māori atmosphere, and a friendly experience in the heart of Le Quesnoy.",
+      copyright: {
+        developer: "— Developed by Dacacio Mathis",
+      },
     },
   },
 

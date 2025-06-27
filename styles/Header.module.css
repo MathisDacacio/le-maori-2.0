@@ -1,53 +1,95 @@
-  
-.nav {
-    display: flex;
-    gap: 2rem;
-    font-size: 1rem;
-}
-  
-.nav a {
-    color: rgb(20, 3, 3);
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.3s;
-}
-  
-.nav a:hover {
-    color: #d0ffd0;
-}
-  
-.active {
-    border-bottom: 2px solid rgb(0, 0, 0);
-    color: rgb(131, 102, 81);
+.header {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.45); /* effet de contraste sur le bois */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
-.languageSwitcher {
-  margin-left: auto;
+.container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.langButton {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  padding: 0.3rem 0.7rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background 0.3s, color 0.3s;
+.nav {
+  display: flex;
+  gap: 4rem;
+  font-size: 2rem;
 }
 
-.langButton:hover {
-  background: white;
-  color: black;
+.link {
+  color: #d9fa45; /* vert fluo/jaune */
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
+
+@keyframes underlineTribal {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(to right, #ffcc00, #ff6f00);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  animation: underlineTribal 0.4s forwards;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffcc00; /* jaune doré */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #32a852); /* vert tribal */
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.logo {
+  height: 200px;
+  margin: 0, 0, 0, 0;
+  padding: 0, 0, 0, 0;
+  animation: pulse 3s ease-in-out infinite;
+}
 
 .imgHeader {
-    width: 100%;
-    height: 15rem;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+  display: block;
+  margin-bottom: -0.25rem;
 }
