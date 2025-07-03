@@ -1,4 +1,4 @@
-import styles from '@styles/MentionsLegales.module.css';
+import styles from '@styles/page/MentionsLegales.module.css';
 import { getScopedI18n } from '@locales/server';
 
 export default async function MentionsLegales() {

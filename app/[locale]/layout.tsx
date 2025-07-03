@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Le Maori 2.0',
-  description: 'A Next.js application with internationalization support',
+  description: 'The Brewery in Le Quesnoy',
 };
 
 type LocaleParams = {

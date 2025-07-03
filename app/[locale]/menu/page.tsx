@@ -1,6 +1,6 @@
 import { DessertType, menu, MenuType } from "@data/menu";
 import Image from "next/image";
-import styles from "@styles/Menu.module.css";
+import styles from "@styles/page/Menu.module.css";
 
 const menuTypes: MenuType[] = [
   "Planches Apéro",

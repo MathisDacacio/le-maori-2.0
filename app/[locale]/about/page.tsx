@@ -1,4 +1,6 @@
-import styles from '@styles/About.module.css';
+import styles from '@styles/page/About.module.css';
+
+//vous cherchez un job etudiant ? contactez nous
 
 export default function AboutPage() {
     return (

@@ -1,4 +1,4 @@
-import styles from '@styles/CardMenu.module.css';
+import styles from '@styles/component/CardMenu.module.css';
 
 interface CardMenuProps {
   name: string;

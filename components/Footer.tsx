@@ -1,4 +1,4 @@
-import styles from '@styles/Footer.module.css';
+import styles from '@styles/component/Footer.module.css';
 import { getScopedI18n } from '@locales/server';
 import ScrollToTopButton from '@components/ScrollToTop';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@styles/ScrollToTop.module.css';
+import styles from '@styles/component/ScrollToTop.module.css';
 
 export default function ScrollToTopButton() {
   return (

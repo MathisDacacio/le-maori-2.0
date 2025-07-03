@@ -1,7 +1,7 @@
 "use client";
 
 import { useCurrentLocale, useChangeLocale } from '@locales/client';
-import styles from '@styles/LocaleSelect.module.css';
+import styles from '@styles/component/LocaleSelect.module.css';
 
 export const LocaleSelect = () => {
   const locale = useCurrentLocale();

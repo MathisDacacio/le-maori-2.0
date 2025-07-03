@@ -3,7 +3,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import styles from '@styles/Header.module.css';
+import styles from '@styles/component/Header.module.css';
 
 export function HeaderClient({ locale, labels }: { locale: string; labels: Record<string, string> }) {
   const pathname = usePathname();

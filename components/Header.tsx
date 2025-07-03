@@ -1,5 +1,5 @@
 import { getScopedI18n } from '@locales/server';
-import styles from '@styles/Header.module.css';
+import styles from '@styles/component/Header.module.css';
 import { LocaleSelect } from '@components/LocaleSelect';
 import { HeaderClient } from '@components/HeaderClient';
 
