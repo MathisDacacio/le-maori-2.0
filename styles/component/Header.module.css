@@ -80,9 +80,10 @@
 }
 
 .logo {
-  height: 200px;
-  margin: 0;
+  height: 15rem;
+  margin: 1rem 0;
   padding: 0;
+  display: block;
   animation: pulse 3s ease-in-out infinite;
 }
 
@@ -91,6 +92,7 @@
   height: 13rem;
   object-fit: cover;
   display: block;
+  margin-top: 0;
   margin-bottom: -0.25rem;
 }
 
@@ -102,7 +104,9 @@
   }
 
   .logo {
-    height: 100px;
+    height: 8rem;
+    margin: 0.5rem 0;
+    padding: 2rem;
   }
 }
 

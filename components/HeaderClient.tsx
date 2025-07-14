@@ -1,4 +1,3 @@
-//utile pour le style "active" du css
 'use client';
 
 import { usePathname } from 'next/navigation';
