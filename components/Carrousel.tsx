@@ -3,52 +3,80 @@
 import { useState } from 'react';
 import styles from '@styles/component/Carroussel.module.css';
 import Image from 'next/image';
-
-const items = [
-  {
-    src: '/images/phone.jpg',
-    alt: 'Accessibilité',
-    text: 'Accès pour tous, mobilité réduite incluse'
-  },
-  {
-    src: '/images/decors.jpg',
-    alt: 'Décors',
-    text: "Immersion dans l'univers Maori"
-  },
-  {
-    src: '/images/prix.jpg',
-    alt: 'Prix',
-    text: 'Plats pour tous les budgets et envies'
-  },
-  {
-    src: '/images/produits-frais.jpg',
-    alt: 'Produits frais',
-    text: 'Plats faits maison avec des produits frais et locaux'
-  },
-];
+import { useScopedI18n } from '@locales/client';
 
 export default function Carrousel() {
+  const carrouselT = useScopedI18n('homepage.homesection2.carrousel');
+
   const [index, setIndex] = useState(0);
+
+  const items = [
+    {
+      src: '/image/decorative/HomePage/cartes_section2/fauteuil.png',
+      alt: 'Accessibilité',
+      text: carrouselT('accessibility'),
+    },
+    {
+      src: '/image/decorative/HomePage/cartes_section2/nouvelle-zelande.png',
+      alt: 'Décors',
+      text: carrouselT('immersion'),
+    },
+    {
+      src: '/image/decorative/HomePage/cartes_section2/plats.png',
+      alt: 'Prix',
+      text: carrouselT('budget'),
+    }
+  ];
 
   const prev = () => setIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
   const next = () => setIndex((prevIndex) => (prevIndex + 1) % items.length);
 
   return (
     <div className={styles.carouselContainer}>
-        <button onClick={prev} className={styles.arrow}>←</button>
+      <Image
+        src="/image/decorative/HomePage/tambour.png"
+        alt="Précédent"
+        width={200}
+        height={200}
+        className={`${styles.drumButton} ${styles.leftDrum}`}
+        onClick={prev}
+      />
 
-        <div className={styles.carouselItem}>
-            <Image
-                src={items[index].src}
-                alt={items[index].alt}
+      <div className={styles.carouselWrapper}>
+        {items.map((item, i) => {
+          const relativeIndex = (i - index + items.length) % items.length;
+          const position =
+            relativeIndex === 0
+              ? 'center'
+              : relativeIndex === 1 || (index === items.length - 1 && i === 0)
+              ? 'right'
+              : relativeIndex === items.length - 1 || (index === 0 && i === items.length - 1)
+              ? 'left'
+              : 'hidden';
+
+          return (
+            <div key={i} className={`${styles.carouselItem} ${styles[position]}`}>
+              <Image
+                src={item.src}
+                alt={item.alt}
                 width={500}
                 height={300}
                 className={styles.image}
-            />
-            <p>{items[index].text}</p>
-        </div>
+              />
+              {position === 'center' && <p>{item.text}</p>}
+            </div>
+          );
+        })}
+      </div>
 
-        <button onClick={next} className={styles.arrow}>→</button>
+      <Image
+        src="/image/decorative/HomePage/tambour.png"
+        alt="Suivant"
+        width={200}
+        height={200}
+        className={`${styles.drumButton} ${styles.rightDrum}`}
+        onClick={next}
+      />
     </div>
   );
 }

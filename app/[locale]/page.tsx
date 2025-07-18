@@ -3,6 +3,7 @@
 import styles from '@styles/page/HomePage.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getScopedI18n } from '@locales/server';
 import Carrousel from '@components/Carrousel';
 
 // premiere partie: cartes en quinconce avec texte et photo
@@ -11,9 +12,9 @@ import Carrousel from '@components/Carrousel';
     // 3 : retrouvez nous au centre de Le Quesnoy pour un voyageen terre maori : carte d'itineraire
     // 4 : nos plats sont faits pour vous, decouvrez nos plats; vegetariens, sans gluten, vegan, épicé etc. : lien vers la carte
 // deuxieme partie: cartes avec images/ titre capable de changer avec des fleches gauche/droite
-    // 1 : Accecibles pour tout type de mobilité reduite
-    // 2 : immerssion dans l'univers de la pizza cuites devant vous
-    // 3 : Pour tout budget, des pizzas pour tous les goûts et toutes les envies
+    // 1 : Accecibles pour tout type de mobilité reduite -
+    // 2 : immerssion dans l'univers maori -
+    // 3 : Pour tout budget, des plats pour tous les goûts et toutes les envies -
     // 4 : Des plats faits maison, avec des produits frais et locaux
     // 5 : Nos moyens de paiement
 // troisieme partie: image + texte en ligne
@@ -25,7 +26,13 @@ import Carrousel from '@components/Carrousel';
     // 4 : vous hesitez encore ? Découvrez les avis de nos clients sur Google pour chacun de nos restaurants (redirection vers le footer)
     // 5 : Vous avez une question ou Vous souhaitez nous rejoindre ? Contactez nous par téléphone ou par mail (redirection vers le footer)
     
-export default function HomePage() {
+export default async function HomePage() {
+  const homepageT = await getScopedI18n("homepage.herosection");
+  const homesection1T = await getScopedI18n("homepage.homesection1");
+  const homesection2T = await getScopedI18n("homepage.homesection2");
+  const homesection3T = await getScopedI18n("homepage.homesection3");
+  const homesection4T = await getScopedI18n("homepage.homesection4");
+
   return (
     <div className={styles.container}>
       {/* Hero Section */}
@@ -34,76 +41,163 @@ export default function HomePage() {
         alt="Image de fond du restaurant Maori"
         className={styles.heroImage}
       />
-      <h1 className={styles.title}>Bienvenue en terre Maori</h1>
-      {/* SECTION 1 : Cartes en quinconce avec texte et photo */}
+      <h1 className={styles.title}>{homepageT("welcome")}</h1>
+
+      {/* SECTION 1 */}
       <section className={styles.Section1_wrapper}>
-        {/* Carte 1 - Vous voulez savoir si la meilleure brasserie de Le Quesnoy est ouverte ? : appelez nous*/}
+        {/* Carte 1 */}
         <div className={styles.Section1_card}>
           <div className={styles.text}>
-            <h2>Vous voulez savoir si la meilleure brasserie de Le Quesnoy <br />est ouverte ?</h2>
-            <p>Appelez-nous: <a href="tel:+33977052778" className={styles.link}>09 77 05 27 78</a></p>
-          </div>
-          <Image
-            src="/image/decorative/homePage/salle.jpg"
-            alt="Photo de la façade du Maori"
-            width={500} 
-            height={300}
-            className={styles.image}
-          />
-        </div>
-
-        {/* Carte 2 - Plongez dans l'ambiance chaleureuse du Maori ! : horaires d'ouverture */}
-        <div className={`${styles.Section1_card} ${styles.reverse}`}>
-          <div className={styles.text}>
-            <h2>Plongez dans l'ambiance chaleureuse du Maori !</h2>
-            <div className={styles.openingHours}>
-              <h3>Nos horaires d'ouverture</h3>
-              <p>Lundi - Vendredi : 11h00 - 23h00</p> 
-              <p>Samedi - Dimanche : 12h00 - 00h00</p>
-            </div>
+            <h2>{homesection1T("card1.title")}</h2>
+            <p>
+              {homesection1T("card1.callToAction")}:{" "}
+              <a href="tel:+33977052778" className={styles.link}>09 77 05 27 78</a>
+            </p>
           </div>
           <Image
             src="/image/decorative/homePage/salle.jpg"
             alt="Photo de l'intérieure du Maori"
-            width={500}
-            height={300}
+            width={500} height={300}
             className={styles.image}
           />
         </div>
 
-        {/* Carte 3 - Retrouvez-nous au centre de Le Quesnoy pour un voyage en terre Maori : carte d'itinéraire */}
+        {/* Carte 2 */}
+        <div className={`${styles.Section1_card} ${styles.reverse}`}>
+          <div className={styles.text}>
+            <h2>{homesection1T("card2.title")}</h2>
+            <div className={styles.openingHours}>
+              <h3>{homesection1T("card2.openingHours")}</h3>
+              <p>{homesection1T("card2.when.week")}: 10h00 - 23h00</p>
+              <p>{homesection1T("card2.when.weekend")}: 10h00 - 00h00</p>
+              <h3>{homesection1T("card2.openingHoursKitchen")}</h3>
+              <p>{homesection1T("card2.when.lunch")}: 12h00 - 13h45</p>
+              <p>{homesection1T("card2.when.dinner")}: 19h00 - 21h45</p>
+            </div>
+          </div>
+          <Image
+            src="/image/decorative/homePage/salle.jpg"
+            alt="Photo de la façade du Maori"
+            width={500} height={300}
+            className={styles.image}
+          />
+        </div>
+
+        {/* Carte 3 */}
         <div className={styles.Section1_card}>
           <div className={styles.text}>
-            <h2>On préfère vous voir en vrai ! Retrouvez-nous au cœur de Le Quesnoy.</h2>
-            <p><a href="https://maps.google.com" className={styles.link}>Itinéraire direct</a></p>
+            <h2>{homesection1T("card3.title")}</h2>
+            <p>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Le+Maori+2.0+Le+Quesnoy"
+                target="_blank"
+                className={styles.link}
+              >
+                {homesection1T("card3.callToAction")}
+              </a>
+            </p>
           </div>
           <iframe
             className={styles.map}
             title="Carte du restaurant Maori"
-            src="https://www.google.com/maps?q=50.2474503,3.63805&z=19&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.3769440506444!2d3.6354315775125263!3d50.24754380195137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c28b8c96814fef%3A0xf966314a2e2baded!2sLe%20Maori%202.0!5e0!3m2!1sfr!2sfr!4v1752750105453!5m2!1sfr!2sfr"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
 
-        {/* Carte 4 - Nos plats sont faits pour vous : découvrez nos plats végétariens, sans gluten, vegan, épicés, etc. */}
+        {/* Carte 4 */}
         <div className={`${styles.Section1_card} ${styles.reverse}`}>
           <div className={styles.text}>
-            <h2>Des plats pour toutes les envies ! </h2>
-            <p>Découvrez nos plats végétariens, sans gluten, vegan, épicés, etc.</p>
-            <Link href="/menu" className={styles.bouton}>Menu</Link>
+            <h2>{homesection1T("card4.title")}</h2>
+            <p>{homesection1T("card4.description")}</p>
+            <Link href="/menu" className={styles.bouton}>
+              {homesection1T("card4.menuLink")}
+            </Link>
           </div>
           <Image
             src="/image/menu/burger/le_states.png"
             alt="Photo d'un plat"
-            width={500}
-            height={300}
+            width={500} height={300}
             className={styles.image}
           />
         </div>
       </section>
 
+      {/* SECTION 2 */}
+      <section className={styles.Section2_wrapper}>
+        <h2 className={styles.title}>{homesection2T("title")}</h2>
+        <Carrousel />
+      </section>
+
+      {/* SECTION 3 */}
+      <section className={styles.Section3_wrapper}>
+        <h2 className={styles.title}>{homesection3T("title")}:</h2>
+        <div className={styles.Section3_content}>
+          <div className={styles.Section3_element}>
+            <img src="/image/decorative/HomePage/logo_section3/carte_bancaire.svg" alt="Logo carte bancaire" className={styles.Section3_icon} />
+            <p>{homesection3T("paymentMethods.creditCard")}</p>
+          </div>
+          <div className={styles.Section3_element}>
+            <img src="/image/decorative/homePage/logo_section3/espèce.png" alt="Logo espèce" className={styles.Section3_icon} />
+            <p>{homesection3T("paymentMethods.cash")}</p>
+          </div>
+          <div className={styles.Section3_element}>
+            <img src="/image/decorative/homePage/logo_section3/chèque_déjeuner.png" alt="Logo chèque déjeuner" className={styles.Section3_icon} />
+            <p>{homesection3T("paymentMethods.mealVouchers")}</p>
+          </div>
+          <div className={styles.Section3_element}>
+            <img src="/image/decorative/homePage/logo_section3/carte_déjeuner.png" alt="Logo Carte déjeuner" className={styles.Section3_icon} />
+            <p>{homesection3T("paymentMethods.mealCard")}</p>
+          </div>
+        </div>
+      </section>
+      <span className={styles.separatorImage}></span>
+
+      {/* SECTION 4 */}
+      <section className={styles.Section4_wrapper}>
+        <div className={styles.Section4_vertical}>
+          <div className={styles.Section4_card}>
+            <h2>{homesection4T("choose.title")}</h2>
+            <p><Link href="/menu">{homesection4T("choose.callToAction")}</Link></p>
+            <h2>{homesection4T("immersive.title")}</h2>
+            <p><Link href="/about">{homesection4T("immersive.callToAction")}</Link></p>
+          </div>
+          <Image
+            src="/image/decorative/homePage/decoration_murale.jpg"
+            alt="decoration du restaurant"
+            width={500} height={300}
+            className={styles.Section4_image}
+          />
+        </div>
+
+        <div className={styles.Section4_media}>
+          <h2>{homesection4T("media.title")}</h2>
+          <p><Link href="/about#media">{homesection4T("media.callToAction")}</Link></p>
+        </div>
+
+        <div className={styles.Section4_vertical}>
+          <Image
+            src="/image/decorative/homePage/Tshirt_maori.jpg"
+            alt="Tshirt le Maori"
+            width={500} height={300}
+            className={styles.Section4_image}
+          />
+          <div className={styles.Section4_card}>
+            <h2>{homesection4T("reviews.title")}</h2>
+            <p>
+              <a target="_blank" href="https://www.google.fr/maps/place/Le+Maori+2.0/...">
+                {homesection4T("reviews.callToAction")}
+              </a>
+            </p>
+            <h2>{homesection4T("contact.title")}</h2>
+            <ul>
+              <li>{homesection4T("contact.tel")}: <a href="tel:+33977052778">09 77 05 27 78</a></li>
+              <li>{homesection4T("contact.email")}: <a href="mailto:lemaori@gmail.com">lemaori@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

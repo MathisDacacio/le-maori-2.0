@@ -45,10 +45,75 @@ export default {
   },
 
   // home page
-  home: {
-    title: {
+  homepage: {
+    herosection: {
       welcome: "Bienvenue en Terre Maori",
     },
+    homesection1: {
+      card1: {
+        title: "Vous voulez savoir si la meilleure brasserie de Le Quesnoy a de la place ?",
+        callToAction: "Appelez-nous",
+      },
+      card2: {
+        title: "Vous voulez savoir si le Maori est ouvert ?",
+        openingHours: "Nos horaires d'ouverture",
+        openingHoursKitchen: "Nos horaires de cuisines",
+        when: {
+          week: "Lundi au Jeudi",
+          weekend: "Vendredi et Samedi",
+          lunch: "Le midi",
+          dinner: "Le soir",
+        },
+      },
+      card3: {
+        title: "On préfère vous voir en vrai ! Retrouvez-nous au cœur de Le Quesnoy",
+        callToAction: "Itinéraire direct",
+      },
+      card4: {
+        title: "Des plats pour toutes les envies",
+        description: "Découvrez nos plats végétariens, vegan, épicés, etc.",
+        menuLink: "Lien vers la carte",
+      },
+    },
+    homesection2: {
+      title: "Ce qui nous rend uniques",
+      carrousel: {
+        accessibility: "Accessibilité",
+        immersion: "Immersion dans l'univers maori",
+        budget: "Pour tous les budgets, des plats pour tous les goûts",
+      },
+    },
+    homesection3: {
+      title: "Moyens de paiement acceptés",
+      paymentMethods: {
+        creditCard: "Carte bancaire",
+        cash: "Espèce",
+        mealVouchers: "Chèques déjeuner",
+        mealCard: "Carte déjeuner",
+      },
+    },
+    homesection4: {
+      choose: {
+        title: "Vous ne savez pas quoi choisir",
+        callToAction: "Découvrez les plats recommandés par nos chefs",
+      },
+      immersive: {
+        title: "Vidéo immersive dans nos cuisines",
+        callToAction: "Regardez notre vidéo",
+      },
+      media: {
+        title: "Nous sommes actifs",
+        callToAction: "Retrouvez nos derniers posts",
+      },
+      reviews: {
+        title: "Découvrez les avis de nos clients",
+        callToAction: "Lire les avis sur Google",
+      },
+      contact: {
+        title: "Besoin d'un renseignement ? Contactez Nous !",
+        tel: "Téléphone",
+        email: "Email",
+      },
+    },
   },
-  hello: "bonjour",
 } as const

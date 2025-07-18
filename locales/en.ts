@@ -1,3 +1,5 @@
+import Carrousel from "@components/Carrousel";
+
 // locales/en.ts
 export default {
 
@@ -42,11 +44,76 @@ export default {
     },
   },
 
-   // home page
-  home: {
-    title: {
-      welcome: "Welcome in Maori Land",
+  // home page
+  homepage: {
+    herosection: {
+      welcome: "Welcome to Maori Land",
+    },
+    homesection1: {
+      card1: {
+        title: "Want to know if the best brasserie in Le Quesnoy has a table for you?",
+        callToAction: "Call us",
+      },
+      card2: {
+        title: "Wondering if Le Maori is open?",
+        openingHours: "Our opening hours",
+        openingHoursKitchen: "Our kitchen hours",
+        when: {
+          week: "Monday to Thursday",
+          weekend: "Friday and Saturday",
+          lunch: "Lunch",
+          dinner: "Dinner",
+        },
+      },
+      card3: {
+        title: "We’d rather see you in person! Find us in the heart of Le Quesnoy",
+        callToAction: "Get directions",
+      },
+      card4: {
+        title: "Dishes for every craving",
+        description: "Discover our vegetarian, vegan, spicy dishes, and more.",
+        menuLink: "View the menu",
+      },
+    },
+    homesection2: {
+      title: "What makes us unique",
+      carrousel: {
+        accessibility: "Accessibility",
+        immersion: "Immersion in the Māori universe",
+        budget: "For all budgets, dishes for all tastes",
+      }
+    },
+    homesection3: {
+      title: "Accepted payment methods",
+      paymentMethods: {
+        creditCard: "Credit card",
+        cash: "Cash",
+        mealVouchers: "Meal vouchers",
+        mealCard: "Meal card",
+      },
+    },
+    homesection4: {
+      choose: {
+        title: "Not sure what to pick?",
+        callToAction: "Check out the dishes our chefs recommend",
+      },
+      immersive: {
+        title: "Step into our kitchen",
+        callToAction: "Watch the video",
+      },
+      media: {
+        title: "We’re active!",
+        callToAction: "See our latest posts",
+      },
+      reviews: {
+        title: "What our customers say",
+        callToAction: "Read reviews on Google",
+      },
+      contact: {
+        title: "Need information? Get in touch!",
+        tel: "Phone",
+        email: "Email",
+      },
     },
   },
-  
 } as const

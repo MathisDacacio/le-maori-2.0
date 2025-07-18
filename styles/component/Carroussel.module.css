@@ -1,0 +1,145 @@
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #062e2e;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding-left: -2rem;
+  height: 25vw;
+  perspective: 1000px;
+}
+
+.carouselItem {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  width: 90%;
+  max-width: 500px;
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 4px solid #ffa654;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Text under center image only */
+.carouselItem p {
+  color: #fff8f0;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+  background: linear-gradient(to right, #ffb347, #ffcc70);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Positions */
+.center {
+  transform: translateX(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
+.left {
+  transform: translateX(-55%) scale(0.75);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.right {
+  transform: translateX(55%) scale(0.75);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.15); }
+  60%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.drumButton {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+}
+
+.drumButton:active {
+  animation: bounce 0.4s ease;
+}
+
+/* Position optionnelle selon structure */
+.leftDrum {
+  margin-right: 1rem;
+}
+
+.rightDrum {
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .carouselWrapper {
+    width: 100%;
+    height: 30vw;
+  }
+
+  .carouselItem {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .image {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .carouselItem p {
+    font-size: 1.5rem;
+  }
+
+  .drumButton {
+    width: 60px;
+    height: 60px;
+    margin-top: 17rem;
+  }
+
+  .left
+  .right {
+    display: none;
+  }
+}
