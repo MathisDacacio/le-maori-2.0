@@ -2,7 +2,6 @@
 
 import styles from '@styles/page/HomePage.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getScopedI18n } from '@locales/server';
 import Carrousel from '@components/Carrousel';
 
@@ -54,12 +53,7 @@ export default async function HomePage() {
               <a href="tel:+33977052778" className={styles.link}>09 77 05 27 78</a>
             </p>
           </div>
-          <Image
-            src="/image/decorative/homePage/salle.jpg"
-            alt="Photo de l'intérieure du Maori"
-            width={500} height={300}
-            className={styles.image}
-          />
+          <img src="/image/decorative/homePage/salle.jpg" alt="Photo de l'intérieure du Maori" className={styles.image}/>
         </div>
 
         {/* Carte 2 */}
@@ -75,12 +69,7 @@ export default async function HomePage() {
               <p>{homesection1T("card2.when.dinner")}: 19h00 - 21h45</p>
             </div>
           </div>
-          <Image
-            src="/image/decorative/homePage/salle.jpg"
-            alt="Photo de la façade du Maori"
-            width={500} height={300}
-            className={styles.image}
-          />
+          <img src="/image/decorative/homePage/salle.jpg" alt="Photo de la façade du Maori" className={styles.image}/>
         </div>
 
         {/* Carte 3 */}
@@ -115,12 +104,7 @@ export default async function HomePage() {
               {homesection1T("card4.menuLink")}
             </Link>
           </div>
-          <Image
-            src="/image/menu/burger/le_states.png"
-            alt="Photo d'un plat"
-            width={500} height={300}
-            className={styles.image}
-          />
+          <img src="/image/menu/burger/le_states.png" alt="Photo d'un plat" className={styles.image}/>
         </div>
       </section>
 
@@ -163,26 +147,16 @@ export default async function HomePage() {
             <h2>{homesection4T("immersive.title")}</h2>
             <p><Link href="/about">{homesection4T("immersive.callToAction")}</Link></p>
           </div>
-          <Image
-            src="/image/decorative/homePage/decoration_murale.jpg"
-            alt="decoration du restaurant"
-            width={500} height={300}
-            className={styles.Section4_image}
-          />
+          <img src="/image/decorative/homePage/decoration_murale.jpg" alt="decoration du restaurant" className={styles.Section4_image}/>
         </div>
 
         <div className={styles.Section4_media}>
           <h2>{homesection4T("media.title")}</h2>
-          <p><Link href="/about#media">{homesection4T("media.callToAction")}</Link></p>
+          <p><Link href="/about">{homesection4T("media.callToAction")}</Link></p>
         </div>
 
         <div className={styles.Section4_vertical}>
-          <Image
-            src="/image/decorative/homePage/Tshirt_maori.jpg"
-            alt="Tshirt le Maori"
-            width={500} height={300}
-            className={styles.Section4_image}
-          />
+          <img src="/image/decorative/homePage/Tshirt_maori.jpg" alt="Tshirt le Maori" className={styles.Section4_image}/>
           <div className={styles.Section4_card}>
             <h2>{homesection4T("reviews.title")}</h2>
             <p>

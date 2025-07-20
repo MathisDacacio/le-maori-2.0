@@ -6,30 +6,32 @@ import Image from 'next/image';
 import { useScopedI18n } from '@locales/client';
 
 export default function Carrousel() {
-  const carrouselT = useScopedI18n('homepage.homesection2.carrousel');
-
-  const [index, setIndex] = useState(0);
+  const t = useScopedI18n('homepage.homesection2.carrousel');
 
   const items = [
     {
       src: '/image/decorative/HomePage/cartes_section2/fauteuil.png',
       alt: 'Accessibilité',
-      text: carrouselT('accessibility'),
+      text: t('accessibility'),
     },
     {
       src: '/image/decorative/HomePage/cartes_section2/nouvelle-zelande.png',
       alt: 'Décors',
-      text: carrouselT('immersion'),
+      text: t('immersion'),
     },
     {
       src: '/image/decorative/HomePage/cartes_section2/plats.png',
       alt: 'Prix',
-      text: carrouselT('budget'),
+      text: t('budget'),
     }
   ];
 
-  const prev = () => setIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-  const next = () => setIndex((prevIndex) => (prevIndex + 1) % items.length);
+  const [index, setIndex] = useState(0);
+
+  const prev = () =>
+    setIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+  const next = () =>
+    setIndex((prevIndex) => (prevIndex + 1) % items.length);
 
   return (
     <div className={styles.carouselContainer}>
