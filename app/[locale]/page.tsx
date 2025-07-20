@@ -120,7 +120,7 @@ export default async function HomePage() {
         <h2 className={styles.title}>{homesection3T("title")}:</h2>
         <div className={styles.Section3_content}>
           <div className={styles.Section3_element}>
-            <img src="/image/decorative/HomePage/logo_section3/carte_bancaire.svg" alt="Logo carte bancaire" className={styles.Section3_icon} />
+            <img src="/image/decorative/homePage/logo_section3/carte_bancaire.svg" alt="Logo carte bancaire" className={styles.Section3_icon} />
             <p>{homesection3T("paymentMethods.creditCard")}</p>
           </div>
           <div className={styles.Section3_element}>

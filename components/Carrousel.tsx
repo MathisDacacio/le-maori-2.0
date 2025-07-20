@@ -10,17 +10,17 @@ export default function Carrousel() {
 
   const items = [
     {
-      src: '/image/decorative/HomePage/cartes_section2/fauteuil.png',
+      src: "/image/decorative/homePage/cartes_section2/fauteuil.png",
       alt: 'Accessibilité',
       text: t('accessibility'),
     },
     {
-      src: '/image/decorative/HomePage/cartes_section2/nouvelle_zelande.png',
+      src: "/image/decorative/homePage/cartes_section2/nouvelle_zelande.png",
       alt: 'Décors',
       text: t('immersion'),
     },
     {
-      src: '/image/decorative/HomePage/cartes_section2/plats.png',
+      src: "/image/decorative/homePage/cartes_section2/plats.png",
       alt: 'Prix',
       text: t('budget'),
     }
@@ -36,7 +36,7 @@ export default function Carrousel() {
   return (
     <div className={styles.carouselContainer}>
       <Image
-        src="/image/decorative/HomePage/tambour.png"
+        src="/image/decorative/homePage/tambour.png"
         alt="Précédent"
         width={200}
         height={200}
@@ -72,7 +72,7 @@ export default function Carrousel() {
       </div>
 
       <Image
-        src="/image/decorative/HomePage/tambour.png"
+        src="/image/decorative/homePage/tambour.png"
         alt="Suivant"
         width={200}
         height={200}
