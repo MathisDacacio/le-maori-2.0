@@ -2,6 +2,7 @@
 
 import styles from '@styles/page/HomePage.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getScopedI18n } from '@locales/server';
 import Carrousel from '@components/Carrousel';
 
@@ -123,15 +124,15 @@ export default async function HomePage() {
             <p>{homesection3T("paymentMethods.creditCard")}</p>
           </div>
           <div className={styles.Section3_element}>
-            <img src="/image/decorative/homePage/logo_section3/espèce.png" alt="Logo espèce" className={styles.Section3_icon} />
+            <img src="/image/decorative/homePage/logo_section3/espece.png" alt="Logo espèce" className={styles.Section3_icon} />
             <p>{homesection3T("paymentMethods.cash")}</p>
           </div>
           <div className={styles.Section3_element}>
-            <img src="/image/decorative/homePage/logo_section3/chèque_déjeuner.png" alt="Logo chèque déjeuner" className={styles.Section3_icon} />
+            <img src="/image/decorative/homePage/logo_section3/cheque_dejeuner.png" alt="Logo chèque déjeuner" className={styles.Section3_icon} />
             <p>{homesection3T("paymentMethods.mealVouchers")}</p>
           </div>
           <div className={styles.Section3_element}>
-            <img src="/image/decorative/homePage/logo_section3/carte_déjeuner.png" alt="Logo Carte déjeuner" className={styles.Section3_icon} />
+            <img src="/image/decorative/homePage/logo_section3/carte_dejeuner.png" alt="Logo Carte déjeuner" className={styles.Section3_icon} />
             <p>{homesection3T("paymentMethods.mealCard")}</p>
           </div>
         </div>

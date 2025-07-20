@@ -15,7 +15,7 @@ export default function Carrousel() {
       text: t('accessibility'),
     },
     {
-      src: '/image/decorative/HomePage/cartes_section2/nouvelle-zelande.png',
+      src: '/image/decorative/HomePage/cartes_section2/nouvelle_zelande.png',
       alt: 'Décors',
       text: t('immersion'),
     },
