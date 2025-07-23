@@ -2,7 +2,6 @@
 
 import styles from '@styles/page/HomePage.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getScopedI18n } from '@locales/server';
 import Carrousel from '@components/Carrousel';
 
@@ -146,14 +145,14 @@ export default async function HomePage() {
             <h2>{homesection4T("choose.title")}</h2>
             <p><Link href="/menu">{homesection4T("choose.callToAction")}</Link></p>
             <h2>{homesection4T("immersive.title")}</h2>
-            <p><Link href="/about">{homesection4T("immersive.callToAction")}</Link></p>
+            <p><Link href="/about#video">{homesection4T("immersive.callToAction")}</Link></p>
           </div>
           <img src="/image/decorative/homePage/decoration_murale.jpg" alt="decoration du restaurant" className={styles.Section4_image}/>
         </div>
 
         <div className={styles.Section4_media}>
           <h2>{homesection4T("media.title")}</h2>
-          <p><Link href="/about">{homesection4T("media.callToAction")}</Link></p>
+          <p><Link href="/about#media">{homesection4T("media.callToAction")}</Link></p>
         </div>
 
         <div className={styles.Section4_vertical}>
@@ -161,7 +160,7 @@ export default async function HomePage() {
           <div className={styles.Section4_card}>
             <h2>{homesection4T("reviews.title")}</h2>
             <p>
-              <a target="_blank" href="https://www.google.fr/maps/place/Le+Maori+2.0/...">
+              <a target="_blank" href="https://www.google.fr/maps/place/Le+Maori+2.0/@50.2475438,3.6354316,17z/data=!4m8!3m7!1s0x47c28b8c96814fef:0xf966314a2e2baded!8m2!3d50.2475404!4d3.6380065!9m1!1b1!16s%2Fg%2F11v3fkl8qs?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D">
                 {homesection4T("reviews.callToAction")}
               </a>
             </p>

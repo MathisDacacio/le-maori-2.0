@@ -9,7 +9,6 @@
   z-index: 1;
 }
 
-/* Pseudoelements avec ornements SVG */
 .container::before,
 .container::after {
   content: "";
@@ -23,13 +22,11 @@
   z-index: -1;
 }
 
-/* Gauche */
 .container::before {
   left: -40px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ff6f00' viewBox='0 0 10 100'><path d='M5 0 Q0 10 5 20 Q10 30 5 40 Q0 50 5 60 Q10 70 5 80 Q0 90 5 100'/></svg>");
 }
 
-/* Droite */
 .container::after {
   right: -40px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 10 100'><path d='M5 0 Q10 10 5 20 Q0 30 5 40 Q10 50 5 60 Q0 70 5 80 Q10 90 5 100'/></svg>");
@@ -38,16 +35,16 @@
 .title {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  color: #32a852; /* Vert vif */
+  color: #32a852;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
 .subTitle {
-  font-size: 1.4rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  color: #ffcc00; /* Jaune plus chaud */
-  border-bottom: 2px solid #ff6f00; /* Orange tribal */
+  color: #ffcc00;
+  border-bottom: 2px solid #ff6f00;
   padding-bottom: 0.25rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -65,6 +62,16 @@
 }
 
 .link:hover {
-  color: #ff6f00; /* Orange vif */
+  color: #ff6f00;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container::after {
+    display: none;
+  }
+
+  .container::before {
+    display: none;
+  }
 }

@@ -19,8 +19,8 @@
   align-items: center;
   width: 90%;
   padding-left: -2rem;
-  height: 25vw;
-  perspective: 1000px;
+  height: 35vw;
+  max-height: 700px;
 }
 
 .carouselItem {

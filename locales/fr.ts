@@ -116,4 +116,57 @@ export default {
       },
     },
   },
+
+  // menu page
+  menu: {
+    title: "Notre Menu",
+    recommendedBy: "Recommandé par",
+    sections: {
+      Planches: "Planches Apéro",
+      Incontournables: "Incontournables",
+      Salades: "Salades",
+      Poissons: "Poissons",
+      Burgers: "Burgers",
+      Desserts: "Desserts",
+    },
+    childrenMenu: {
+      title: "Menu Enfant",
+      description: "Pour les enfants de moins de 12 ans, un menu spécial est proposé.",
+      dish: "Plat Enfant",
+      drink: "Boisson",
+      dessert: "Dessert",
+      dessertList: {
+        iceCream: "Glace",
+        applesauce: "Compote de pommes",
+      },
+    },
+    dailyMenu: {
+      title: "Menu du Jour",
+      description: "Découvrez notre menu du jour, préparé avec des ingrédients frais et de saison.",
+    },
+  },
+
+  // about page
+  about: {
+    title: "À propos de nous",
+    history: {
+      title: "Notre Histoire",
+      description: "Le Maori 2.0 est né de la passion pour la cuisine et l'hospitalité. Depuis notre ouverture en juillet 2023, nous nous engageons à offrir une expérience culinaire unique.",
+    },
+    socialMedia: {
+      title: "Suivez-nous sur les réseaux sociaux",
+      facebook: "Facebook",
+      instagram: "Instagram",
+      twitter: "Twitter",
+    },
+    video: {
+      title: "C'est comment en cuisine ?",
+      description: "Du produit brut à l'assiette découvrez tout ici",
+    },
+    reviews: {
+      title: "Vous avez aimé ?",
+      description: "N'hésitez pas à laisser un avis sur notre cuisine et notre service.",
+      linkText: "Nos avis",
+    },
+  },
 } as const
