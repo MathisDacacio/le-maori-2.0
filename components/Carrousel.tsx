@@ -36,7 +36,7 @@ export default function Carrousel() {
   return (
     <div className={styles.carouselContainer}>
       <Image
-        src="/image/decorative/homePage/tambour.png"
+        src="/image/decorative/homePage/tambour/tambour_gauche.png"
         alt="Précédent"
         width={200}
         height={200}
@@ -72,7 +72,7 @@ export default function Carrousel() {
       </div>
 
       <Image
-        src="/image/decorative/homePage/tambour.png"
+        src="/image/decorative/homePage/tambour/tambour_droit.png"
         alt="Suivant"
         width={200}
         height={200}

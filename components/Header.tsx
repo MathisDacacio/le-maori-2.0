@@ -17,7 +17,7 @@ export default async function Header({ locale }: { locale: string }) {
             about: t("about")
           }}
         />
-        <img src="/image/decorative/logo_maori.png" alt="Logo" className={styles.logo} />
+        <img src="/image/decorative/Logo.jpg" alt="Logo" className={styles.logo} />
         <LocaleSelect />
       </div>
 

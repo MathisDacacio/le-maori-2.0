@@ -25,6 +25,16 @@
   height: auto;
 }
 
+.imageVertical {
+  display: block;
+  margin: 0 auto 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 4px solid #43a047;
+  max-width: 100%;
+  height: auto;
+}
+
 .history {
   border-left: 6px solid #ffa000;
   border-right: 6px solid #ffa000;

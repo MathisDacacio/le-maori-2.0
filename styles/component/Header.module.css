@@ -85,6 +85,7 @@
   padding: 0;
   display: block;
   animation: pulse 3s ease-in-out infinite;
+  border-radius: 20%;
 }
 
 .imgHeader {

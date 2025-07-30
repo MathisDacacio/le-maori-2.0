@@ -151,7 +151,7 @@ export default {
     title: "About Us",
     history: {
       title: "Our Story",
-      description: "Le Maori 2.0 was born from a passion for cooking and hospitality. Since our opening in July 2023, we have been committed to providing a unique culinary experience.",
+      description: "Le Maori 2.0 was born from a passion for cooking and the love of the Māori universe. Since our opening in July 2023, we are committed to providing a unique culinary experience that will take you on a journey. Our warm atmosphere will make you enjoy every moment.",
     },
     socialMedia: {
       title: "Follow us on social media",

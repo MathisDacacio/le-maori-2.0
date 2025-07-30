@@ -39,6 +39,14 @@ export default async function AboutPage() {
           ></iframe>
         </section>
 
+        <Image
+          src="/image/decorative/aboutPage/planche.jpg"
+          alt="Image de fond du restaurant Maori"
+          width={400}
+          height={1400}
+          className={styles.imageVertical}
+        />
+
         <section className={styles.reviews}>
           <h2>{reviewsT('title')}</h2>
           <p>{reviewsT('description')}</p>

@@ -69,7 +69,7 @@ export default async function HomePage() {
               <p>{homesection1T("card2.when.dinner")}: 19h00 - 21h45</p>
             </div>
           </div>
-          <img src="/image/decorative/homePage/salle.jpg" alt="Photo de la façade du Maori" className={styles.image}/>
+          <img src="/image/decorative/homePage/facade.jpg" alt="Photo de la façade du Maori" className={styles.image}/>
         </div>
 
         {/* Carte 3 */}

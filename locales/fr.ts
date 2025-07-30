@@ -151,7 +151,7 @@ export default {
     title: "À propos de nous",
     history: {
       title: "Notre Histoire",
-      description: "Le Maori 2.0 est né de la passion pour la cuisine et l'hospitalité. Depuis notre ouverture en juillet 2023, nous nous engageons à offrir une expérience culinaire unique.",
+      description: "Le Maori 2.0 est né de la passion pour la cuisine et l'amour de l'univers Maori. Depuis notre ouverture en juillet 2023, nous nous engageons à offrir une expérience culinaire unique qui vous fera voyager. Notre ambiance chaleureuse vous fera apprécier chaque instant.",
     },
     socialMedia: {
       title: "Suivez-nous sur les réseaux sociaux",
