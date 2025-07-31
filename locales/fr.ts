@@ -16,6 +16,8 @@ export default {
     phone: "Tél:",
     legalNotice: "Mentions légales",
     reviews: "Voir les avis",
+    googleReviews: "Avis Google",
+    tripadvisorReviews: "Avis Tripadvisor",
 
     description: {
       text: "🍺 Bienvenue à la brasserie Le Maori 2.0, la mieux notée du Quesnoy ! Savourez des bières artisanales exotiques, une ambiance maorie unique et une expérience conviviale au cœur du Quesnoy.",
@@ -107,7 +109,7 @@ export default {
       },
       reviews: {
         title: "Découvrez les avis de nos clients",
-        callToAction: "Lire les avis sur Google",
+        callToAction: "Lire les avis",
       },
       contact: {
         title: "Besoin d'un renseignement ? Contactez Nous !",
@@ -166,7 +168,8 @@ export default {
     reviews: {
       title: "Vous avez aimé ?",
       description: "N'hésitez pas à laisser un avis sur notre cuisine et notre service.",
-      linkText: "Nos avis",
+      googleText: "Avis Google",
+      tripadvisorText: "Avis Tripadvisor",
     },
   },
 } as const

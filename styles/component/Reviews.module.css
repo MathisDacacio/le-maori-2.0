@@ -1,0 +1,44 @@
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.reviewButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #ffa000;
+  background-color: #fff3e0;
+  color: #4e342e;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reviewButton:hover {
+  background-color: #ffe082;
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: clamp(2rem, 2vw, 3rem);
+  height: clamp(2rem, 2vw, 3rem);
+}
+
+@media (max-width: 600px) {
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviewButton {
+    width: 80%;
+    justify-content: center;
+  }
+}

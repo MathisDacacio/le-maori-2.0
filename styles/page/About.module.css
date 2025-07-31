@@ -86,25 +86,21 @@
 .reviews {
   border-top: 4px solid #26a69a;
   border-bottom: 4px solid #26a69a;
-  padding-bottom: 1rem;
+  padding: 1rem;
   text-align: center;
   margin-bottom: 2rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .reviews h2 {
-  color: #00897b;
+  color: #6CC4EA;
   margin-bottom: 0.5rem;
-  font-size: clamp(2rem, 3.5vw, 2.5rem);
-}
-
-.reviews a {
-  color: #ff6f00;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: bold;
-  text-decoration: none;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.reviews a:hover {
-  text-decoration: underline;
+.reviews p {
+  margin-bottom: 1rem;
 }

@@ -16,6 +16,8 @@ export default {
     phone: "Phone:",
     legalNotice: "Legal Notice",
     reviews: "See Reviews",
+    googleReviews: "Google Reviews",
+    tripadvisorReviews: "Tripadvisor Reviews",
 
     description: {
       text: "🍺 Welcome to Le Maori 2.0 — the top-rated craft brewery in Le Quesnoy! Enjoy exotic homemade beers, a unique Māori atmosphere, and a friendly experience in the heart of Le Quesnoy.",
@@ -107,7 +109,7 @@ export default {
       },
       reviews: {
         title: "What our customers say",
-        callToAction: "Read reviews on Google",
+        callToAction: "Read reviews",
       },
       contact: {
         title: "Need information? Get in touch!",
@@ -166,7 +168,8 @@ export default {
     reviews: {
       title: "Did you enjoy?",
       description: "Feel free to leave a review about our food and service.",
-      linkText: "Our reviews",
+      googleText: "Google Reviews",
+      tripadvisorText: "Tripadvisor Reviews",
     },
   },
 } as const
