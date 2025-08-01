@@ -227,7 +227,7 @@ const rawMenu: MenuItem[] = [
     type: "Burgers",
     description: "Pain burger bleu, steak, bacon, cheddar, sauce ketchup, salade, tomates, oignons rouges",
     descriptionEn: "Blue burger bun, steak, bacon, cheddar, ketchup sauce, lettuce, tomatoes, red onions",
-    image: "/image/menu/burger/states.jpg",
+    image: "/image/menu/burger/le_states.png",
     magnets: [],
   },
   {

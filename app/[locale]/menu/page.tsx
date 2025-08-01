@@ -52,7 +52,8 @@ const typeDescriptions: Record<MenuType, { fr: string; en: string }> = {
 const decorativeImages: { index: number; image: string }[] = [
   { index: 9, image: '/image/decorative/menu/maori_table.png' },
   { index: 14, image: '/image/decorative/menu/maori_kiwi.png' },
-  // Ajoute-en d'autres ici si besoin
+  { index: 16, image: '/image/decorative/menu/maori_poisson.png' },
+  { index: 32, image: '/image/decorative/menu/maori_iceberg.png' },
 ];
 
 function DecorativeCard({ image }: { image: string }) {
