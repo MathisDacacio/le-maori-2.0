@@ -131,6 +131,14 @@
   text-align: center;
 }
 
+.Section2_title {
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  margin-bottom: 2rem;
+  color: #ffd700;
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
 /* section 3 */
 .Section3_wrapper {
   padding: 2rem;
@@ -205,6 +213,7 @@
 .Section4_card h2 {
   font-size: clamp(1.6rem, 3vw, 3.7rem);
   color: #ffa654;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 .Section4_card p,

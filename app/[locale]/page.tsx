@@ -91,7 +91,7 @@ export default async function HomePage() {
 
       {/* SECTION 2 */}
       <section className={styles.Section2_wrapper}>
-        <h2 className={styles.title}>{homesection2T("title")}</h2>
+        <h2 className={styles.Section2_title}>{homesection2T("title")}</h2>
         <Carrousel />
       </section>
 

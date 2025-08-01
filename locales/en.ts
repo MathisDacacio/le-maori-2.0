@@ -83,6 +83,7 @@ export default {
         accessibility: "Accessibility",
         immersion: "Immersion in the Māori universe",
         budget: "For all budgets, dishes for all tastes",
+        terrasse: "Outdoor seating",
       }
     },
     homesection3: {

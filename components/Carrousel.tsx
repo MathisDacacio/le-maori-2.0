@@ -23,6 +23,11 @@ export default function Carrousel() {
       src: "/image/decorative/homePage/cartes_section2/plats.png",
       alt: 'Prix',
       text: t('budget'),
+    },
+    {
+      src: "/image/decorative/homePage/cartes_section2/terrasse.png",
+      alt: 'Terrasse',
+      text: t('terrasse'),
     }
   ];
 

@@ -83,6 +83,7 @@ export default {
         accessibility: "Accessibilité",
         immersion: "Immersion dans l'univers maori",
         budget: "Pour tous les budgets, des plats pour tous les goûts",
+        terrasse: "Table en terrasse",
       },
     },
     homesection3: {
