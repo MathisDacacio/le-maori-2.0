@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getScopedI18n } from '@locales/server';
 import Media from '@components/Media';
 import Reviews from '@components/Reviews';
+import DecoMaori from '@components/DecoMaori';
 
 export default async function AboutPage() {
   const aboutT = await getScopedI18n('about');
@@ -11,9 +12,35 @@ export default async function AboutPage() {
   const reviewsT = await getScopedI18n('about.reviews');
     return (
       <div className={styles.container}>
+        {/* Decoration */}
+        <DecoMaori
+          image="/image/decorative/decoMaori/plume.svg"
+          position="top-left"
+          size={200}
+          rotate={25}
+        />
+        <DecoMaori
+          image="/image/decorative/decoMaori/plume.svg"
+          position="top-right"
+          size={100}
+          rotate={180}
+        />
+        <DecoMaori
+          image="/image/decorative/decoMaori/plume.svg"
+          position="bottom-right"
+          size={250}
+          rotate={-15}
+        />
+        <DecoMaori
+          image="/image/decorative/decoMaori/kiwi.svg"
+          position="middle-left"
+          size={150}
+          rotate={0}
+        />
+
         <h1 className={styles.title}>{aboutT('title')}</h1>
         <Image
-          src="/image/decorative/homePage/bienvenue.jpg"
+          src="/image/decorative/aboutPage/anthony.jpg"
           alt="Image du personnel"
           width={1400}
           height={400}

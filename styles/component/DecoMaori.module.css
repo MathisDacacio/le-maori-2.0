@@ -1,0 +1,58 @@
+.decorativeElement {
+  position: absolute;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
+  height: auto;
+}
+
+/* Position classes */
+.top-left {
+  top: -2rem;
+  left: 2rem;
+}
+
+.top-right {
+  top: -2rem;
+  right: 2rem;
+}
+
+.top-center {
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.middle-left {
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.middle-right {
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.bottom-left {
+  bottom: -2rem;
+  left: 2rem;
+}
+
+.bottom-right {
+  bottom: -2rem;
+  right: 2rem;
+}
+
+.bottom-center {
+  bottom: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .decorativeElement {
+    display: none;
+  }
+}

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getScopedI18n } from '@locales/server';
 import Carrousel from '@components/Carrousel';
 import Reviews from '@components/Reviews';
+import MaoriDeco from '@components/DecoMaori';
    
 export default async function HomePage() {
   const homepageT = await getScopedI18n("homepage.herosection");
@@ -25,6 +26,32 @@ export default async function HomePage() {
 
       {/* SECTION 1 */}
       <section className={styles.Section1_wrapper}>
+        {/* Décoration */}
+          <MaoriDeco
+            image="/image/decorative/decoMaori/plume.svg"
+            position="top-left"
+            size={200}
+            rotate={25}
+          />
+          <MaoriDeco
+            image="/image/decorative/decoMaori/plume.svg"
+            position="top-right"
+            size={100}
+            rotate={180}
+          />
+          <MaoriDeco
+            image="/image/decorative/decoMaori/plume.svg"
+            position="bottom-right"
+            size={100}
+            rotate={-15}
+          />
+          <MaoriDeco
+            image="/image/decorative/decoMaori/kiwi.svg"
+            position="middle-left"
+            size={150}
+            rotate={0}
+          />
+
         {/* Carte 1 */}
         <div className={styles.Section1_card}>
           <div className={styles.text}>
@@ -91,12 +118,39 @@ export default async function HomePage() {
 
       {/* SECTION 2 */}
       <section className={styles.Section2_wrapper}>
+        {/* Décoration */}
+        <MaoriDeco
+          image="/image/decorative/decoMaori/kiwi.svg"
+          position="top-right"
+          size={180}
+          rotate={180}
+        />
+        <MaoriDeco
+          image="/image/decorative/decoMaori/plume.svg"
+          position="bottom-right"
+          size={120}
+          rotate={-45}
+        />
+        <MaoriDeco
+          image="/image/decorative/decoMaori/plume.svg"
+          position="bottom-left"
+          size={120}
+          rotate={45}
+        />
+
         <h2 className={styles.Section2_title}>{homesection2T("title")}</h2>
         <Carrousel />
       </section>
 
       {/* SECTION 3 */}
       <section className={styles.Section3_wrapper}>
+        {/* Décoration */}
+        <MaoriDeco
+          image="/image/decorative/decoMaori/plume.svg"
+          position="bottom-center"
+          size={150}
+          rotate={0}
+        />
         <h2 className={styles.title}>{homesection3T("title")}:</h2>
         <div className={styles.Section3_content}>
           <div className={styles.Section3_element}>
@@ -121,6 +175,38 @@ export default async function HomePage() {
 
       {/* SECTION 4 */}
       <section className={styles.Section4_wrapper}>
+        {/* Décoration */}
+        <MaoriDeco
+          image="/image/decorative/decoMaori/plume.svg"
+          position="top-left"
+          size={150}
+          rotate={-30}
+        />
+        <MaoriDeco
+          image="/image/decorative/decoMaori/plume.svg"
+          position="top-right"
+          size={150}
+          rotate={30}
+        />
+        <MaoriDeco
+          image="/image/decorative/decoMaori/kiwi.svg"
+          position="bottom-left"
+          size={150}
+          rotate={-30}
+        />
+        <MaoriDeco
+          image="/image/decorative/decoMaori/kiwi.svg"
+          position="middle-left"
+          size={150}
+          rotate={0}
+        />
+        <MaoriDeco
+          image="/image/decorative/decoMaori/plume.svg"
+          position="bottom-right"
+          size={150}
+          rotate={-30}
+        />
+
         <div className={styles.Section4_vertical}>
           <div className={styles.Section4_card}>
             <h2>{homesection4T("choose.title")}</h2>

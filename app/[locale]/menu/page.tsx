@@ -6,6 +6,7 @@ import { getMenu, DessertType, MenuType } from '@data/menu';
 import Image from 'next/image';
 import styles from '@styles/page/Menu.module.css';
 import React from 'react';
+import DecoMaori from '@components/DecoMaori';
 
 const menuTypes: MenuType[] = [
   'Planches',
@@ -84,6 +85,37 @@ export default function MenuPage() {
 
   return (
     <div className={styles.container}>
+      {/* Decoration */}
+      <DecoMaori
+        image="/image/decorative/decoMaori/plume.svg"
+        position="top-left"
+        size={200}
+        rotate={25}
+      />
+      <DecoMaori
+        image="/image/decorative/decoMaori/plume.svg"
+        position="top-right"
+        size={100}
+        rotate={180}
+      />
+      <DecoMaori
+        image="/image/decorative/decoMaori/plume.svg"
+        position="bottom-right"
+        size={100}
+        rotate={-15}
+      />
+      <DecoMaori
+        image="/image/decorative/decoMaori/kiwi.svg"
+        position="middle-left"
+        size={150}
+        rotate={0}
+      />
+      <DecoMaori
+        image="/image/decorative/decoMaori/maori_table.png"
+        position="bottom-left"
+        size={200}
+        rotate={0}
+      />
       <h1 className={styles.title}>🌺 {menuPageT('title')} 🌴</h1>
 
       <nav className={styles.nav}>
@@ -247,6 +279,8 @@ export default function MenuPage() {
       <div id="Menu-du-jour" className={styles.menuDuJour}>
         <h2>{dailyMenuT('title')}</h2>
         <p>{dailyMenuT('description')}</p>
+        <p className={styles.alert}>{dailyMenuT('alert')}</p>
+
 
         <div className={styles.gallery}>
           <Image

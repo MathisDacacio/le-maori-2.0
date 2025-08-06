@@ -3,6 +3,7 @@
   margin: 0 auto;
   font-family: "Trebuchet MS", sans-serif;
   color: #2b2b2b;
+  position: relative;
 }
 
 .grid {
@@ -187,7 +188,7 @@
 }
 
 .menuImage {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 0.75rem;
   object-fit: cover;
@@ -199,6 +200,13 @@
   transform: scale(1.03);
 }
 
+.alert {
+  color: #848180;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
 
 @media (max-width: 768px) {
   .title {
@@ -207,6 +215,15 @@
 
   .sectionTitle {
     font-size: 1.8rem;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .card:hover {
+    display: none;
   }
 
   .dessertCategory {

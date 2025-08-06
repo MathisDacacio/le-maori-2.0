@@ -145,7 +145,8 @@ export default {
     },
     dailyMenu: {
       title: "Daily Menu",
-      description: "Discover our daily menu, prepared with fresh, seasonal ingredients.",
+      description: "Discover our daily specials, directly in the dining room.",
+      alert: "Note: The photos below are of ephemeral dishes and may no longer be available.",
     },
   },
 
@@ -154,7 +155,7 @@ export default {
     title: "About Us",
     history: {
       title: "Our Story",
-      description: "Le Maori 2.0 was born from a passion for cooking and the love of the Māori universe. Since our opening in July 2023, we are committed to providing a unique culinary experience that will take you on a journey. Our warm atmosphere will make you enjoy every moment.",
+      description: "Le Maori 2.0 was born from a passion for cooking and the love of the Māori universe. Since our opening in July 2023, Anthony (on the right in the photo) and the entire team have been committed to providing a unique culinary experience that will take you on a journey. Our warm atmosphere will make you enjoy every moment.",
     },
     socialMedia: {
       title: "Follow us on social media",

@@ -70,7 +70,9 @@ export default function Carrousel() {
                 height={300}
                 className={styles.image}
               />
-              {position === 'center' && <p>{item.text}</p>}
+              <p style={{ visibility: position === 'center' ? 'visible' : 'hidden' }}>
+                {item.text}
+              </p>
             </div>
           );
         })}

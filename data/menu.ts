@@ -210,7 +210,6 @@ const rawMenu: MenuItem[] = [
     description: "Pain burger blanc aux céréales, steak, cheddar, sauce burger, salade, tomates, oignons rouges",
     descriptionEn: "White cereal burger bun, steak, cheddar, burger sauce, lettuce, tomatoes, red onions",
     image: "/image/menu/burger/classique.jpg",
-    magnets: [],
   },
   {
     name: "Le Dynamite",
@@ -228,7 +227,6 @@ const rawMenu: MenuItem[] = [
     description: "Pain burger bleu, steak, bacon, cheddar, sauce ketchup, salade, tomates, oignons rouges",
     descriptionEn: "Blue burger bun, steak, bacon, cheddar, ketchup sauce, lettuce, tomatoes, red onions",
     image: "/image/menu/burger/le_states.png",
-    magnets: [],
   },
   {
     name: "Le Bimberlot",
@@ -237,7 +235,6 @@ const rawMenu: MenuItem[] = [
     description: "Pain burger orange, steak de poulet pané, emmental, sauce mayonnaise, salade, tomates, oignons rouges",
     descriptionEn: "Orange burger bun, breaded chicken steak, emmental cheese, mayonnaise sauce, lettuce, tomatoes, red onions",
     image: "/image/menu/burger/bimberlot.jpg",
-    magnets: [],
   },
   {
     name: "Le Végé",
