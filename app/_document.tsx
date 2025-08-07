@@ -9,7 +9,7 @@ export default function Document() {
           href="/fonts/font.woff2"
           as="font"
           type="font/woff2"
-          crossOrigin="anonymous" // ✅
+          crossOrigin="anonymous"
         />
       </Head>
       <body>
