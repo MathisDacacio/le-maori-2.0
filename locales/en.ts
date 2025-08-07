@@ -174,4 +174,11 @@ export default {
       tripadvisorText: "Tripadvisor Reviews",
     },
   },
+
+  // not found page
+  notFound: {
+    title: "Page Not Found",
+    description: "Oh no, you got lost! The page you are looking for does not exist.",
+    backHome: "Back to Home",
+  },
 } as const

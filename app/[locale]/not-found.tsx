@@ -1,10 +1,41 @@
+'use client';
+
+import Link from 'next/link';
+import { useScopedI18n } from '@locales/client';
+import Image from 'next/image';
+import styles from '@styles/page/NotFound.module.css';
+import MaoriDeco from '@components/DecoMaori';
 
 export default function NotFound() {
+  const t = useScopedI18n('notFound');
+
   return (
-    <div style={{ textAlign: 'center', padding: '2rem' }}>
-      <h1 style={{ fontSize: '2rem', color: '#ff0000' }}>404 - Page Not Found</h1>
-      <p style={{ fontSize: '1.2rem' }}>Désolé, la page que vous cherchez n'existe pas.</p>
-      <p>Veuillez vérifier l'URL ou retourner à la page d'accueil.</p>
+    <div className={styles.container}>
+
+      {/* Decoration */}
+      <MaoriDeco
+        image="/image/decorative/decoMaori/kiwi.svg"
+        position="bottom-right"
+        size={400}
+        rotate={180}
+      />
+
+      <h1 className={styles.title}>{t('title')}</h1>
+
+      <div className={styles.imageWrapper}>
+        <Image
+          src="/image/decorative/notFound.png"
+          alt="Page Not Found"
+          fill
+          className={styles.image}
+        />
+      </div>
+
+      <p className={styles.description}>{t('description')}</p>
+
+      <Link href="/" className={styles.button}>
+        {t('backHome')}
+      </Link>
     </div>
   );
 }

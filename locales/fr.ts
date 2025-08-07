@@ -174,4 +174,11 @@ export default {
       tripadvisorText: "Avis Tripadvisor",
     },
   },
+
+  // not found page
+  notFound: {
+    title: "Page non trouvée",
+    description: "Oh non, vous vous êtes perdu ! La page que vous cherchez n'existe pas.",
+    backHome: "Retour à l'accueil",
+  },
 } as const
