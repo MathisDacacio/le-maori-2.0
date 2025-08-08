@@ -26,13 +26,13 @@ export default async function AboutPage() {
           rotate={180}
         />
         <DecoMaori
-          image="/image/decorative/decoMaori/plume.svg"
+          image="/image/decorative/decoMaori/kiwi.svg"
           position="bottom-right"
           size={250}
           rotate={-15}
         />
         <DecoMaori
-          image="/image/decorative/decoMaori/kiwi.svg"
+          image="/image/decorative/decoMaori/plume.svg"
           position="middle-left"
           size={150}
           rotate={0}

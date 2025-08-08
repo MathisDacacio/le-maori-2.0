@@ -157,12 +157,7 @@ export default {
       title: "Our Story",
       description: "Le Maori 2.0 was born from a passion for cooking and the love of the Māori universe. Since our opening in July 2023, Anthony (on the right in the photo) and the entire team have been committed to providing a unique culinary experience that will take you on a journey. Our warm atmosphere will make you enjoy every moment.",
     },
-    socialMedia: {
-      title: "Follow us on social media",
-      facebook: "Facebook",
-      instagram: "Instagram",
-      twitter: "Twitter",
-    },
+    socialMedia: "Our social media",
     video: {
       title: "What’s it like in the kitchen?",
       description: "From raw ingredients to the plate, discover it all here.",

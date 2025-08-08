@@ -1,8 +1,8 @@
 .container {
   display: flex;
-  gap: 6rem;
+  gap: 4rem;
   padding: 2rem;
-  background-color: #062e2e;
+  background-color: #0b5555;
   border-radius: 1rem;
   align-items: flex-start;
   justify-content: center;
@@ -13,18 +13,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: clamp(2.5rem, 3.5vw, 3rem);
+  font-size: clamp(2rem, 3vw, 2.5rem);
   text-align: center;
 }
 
 .icons {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
+.logoLink {
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+.logoLink:hover {
+  transform: scale(1.1);
+}
+
 .logo {
-  padding: 1rem;
   width: 5rem;
   height: 5rem;
 }
@@ -32,9 +43,9 @@
 .right {
   background-color: white;
   border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 420px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 480px;
   width: 100%;
 }
 
@@ -52,43 +63,31 @@
   padding: 0.5rem;
 }
 
-.imageContainer {
+.widgetContainer {
   margin-top: 1rem;
   overflow: hidden;
-  border-radius: 0.75rem;
-}
-
-.postImage {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
     text-align: center;
-  }
-
-  .left {
-    font-size: 2rem;
+    gap: 1rem;
+    padding: 0.5rem;
   }
 
   .icons {
+    flex-direction: row;
     justify-content: center;
   }
 
   .logo {
     width: 4rem;
     height: 4rem;
-    padding: 0.5rem;
   }
 
   .right {
-    width: 100%;
-    max-width: 100%;
-    padding: 0.5rem;
+    max-width: 90%;
   }
 }

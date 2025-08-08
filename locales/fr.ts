@@ -157,12 +157,7 @@ export default {
       title: "Notre Histoire",
       description: "Le Maori 2.0 est né de la passion pour la cuisine et l'amour de l'univers Maori. Depuis notre ouverture en juillet 2023, Anthony (à droite sur la photo) et toute l'équipe se sont engagés à offrir une expérience culinaire unique qui vous fera voyager. Notre ambiance chaleureuse vous fera apprécier chaque instant.",
     },
-    socialMedia: {
-      title: "Suivez-nous sur les réseaux sociaux",
-      facebook: "Facebook",
-      instagram: "Instagram",
-      twitter: "Twitter",
-    },
+    socialMedia: "Nos réseaux sociaux",
     video: {
       title: "C'est comment en cuisine ?",
       description: "Du produit brut à l'assiette découvrez tout ici",
